@@ -24,6 +24,10 @@ Write a test to ensure our function throws an error if any of the characters giv
 
 If a player uses all seven tiles, they should score a bonus of 50 points on top of the word score.
 
+## Bonus (if you're here in plenty of time)
+
+Extend the tests and function to accept both uppercase and lowercase letters, and score correctly.
+
 **--- Regroup ---**
 
 ## Step 5
@@ -33,7 +37,3 @@ The board contains Premium squares that double, or triple, the letter score. Ext
 ## Step 6
 
 Premium squares can also double, or triple, the word score.
-
-## Step 7
-
-A word may contain existing characters that should contribute to the score, but should not contribute to the letter count (each player has seven tiles).
