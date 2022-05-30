@@ -37,7 +37,7 @@ We'll keep extending the functionality in small increments.
 2. Now write the least amount of code you can within `calculateScrabbleScore` to pass the failing test case (in other words, make `calculateScrabbleScore` return the correct score for the word `A`).
    - Once you've updated the implementation, try running the test script again.
    - You should now see the test pass (if your implementation is correct).
-   - The is the "green" stage in the TDD cycle (red -> green -> refactor)
+   - This is the "green" stage in the TDD cycle (red -> green -> refactor)
 3. Refactor the implementation/tests where/if needed.
    - This is the "refactor" stage in the TDD cycle (red -> green -> refactor)
 4. Now repeat steps 1-3 for the remaining single letter words (i.e. `B`, `C`, `D` and so forth up to and including `Z`).
