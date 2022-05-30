@@ -33,7 +33,7 @@ We'll keep extending the functionality in small increments.
 1. Write a new test that checks whether `calculateScrabbleScore` correctly calculates the score for the word `A`.
    - Once you've written the test, try running the test script via `npm run test` (or `npm t` for short) in your terminal.
    - You should see the test (that you've just written) fail because the test has been written before the implementation (as is the case in TDD).
-   - This the "red" stage in the TDD cycle (red -> green -> refactor)
+   - This is the "red" stage in the TDD cycle (red -> green -> refactor)
 2. Now write the least amount of code you can within `calculateScrabbleScore` to pass the failing test case (in other words, make `calculateScrabbleScore` return the correct score for the word `A`).
    - Once you've updated the implementation, try running the test script again.
    - You should now see the test pass (if your implementation is correct).
