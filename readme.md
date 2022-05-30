@@ -1,6 +1,6 @@
 # Test driven development
 
-This is the repo for a School of Code session on test driven development (TDD).
+This is the repo for a School of Code session on test driven development (TDD). The resources section at the bottom of this README contains videos/articles that might be helpful for an overview of TDD.
 
 The end goal is to create a `calculateScrabbleScore` function that calculates a scrabble score for a given word and returns the calculated score.
 
@@ -83,3 +83,11 @@ A new requirement has come in.
 > The function should support both uppercase and lowercase letters, and score correctly. The lowercase letters have the same values as their uppercase equivalents.
 
 Go through the TDD process (write a failing test -> update the implementation so that the test passes -> refactor where/if needed) to support/meet this requirement.
+
+## Resources
+
+Some resources on TDD:
+
+- [Video on TDD](#https://www.youtube.com/watch?v=Jv2uxzhPFl4)
+- [Article on TDD](#https://www.ibm.com/garage/method/practices/code/practice_test_driven_development/)
+- [Another article on TDD](#https://www.browserstack.com/guide/what-is-test-driven-development)
