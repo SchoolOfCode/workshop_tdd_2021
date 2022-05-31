@@ -1,3 +1,1 @@
-export default function (word) {
-  return 1;
-}
+export function calculateScrabbleScore(word) {}
