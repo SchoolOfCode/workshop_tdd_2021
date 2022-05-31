@@ -88,6 +88,6 @@ Go through the TDD process (write a failing test -> update the implementation so
 
 Some resources on TDD:
 
-- [Video on TDD](#https://www.youtube.com/watch?v=Jv2uxzhPFl4)
-- [Article on TDD](#https://www.ibm.com/garage/method/practices/code/practice_test_driven_development/)
-- [Another article on TDD](#https://www.browserstack.com/guide/what-is-test-driven-development)
+- [Video on TDD](https://www.youtube.com/watch?v=Jv2uxzhPFl4)
+- [Article on TDD](https://www.ibm.com/garage/method/practices/code/practice_test_driven_development/)
+- [Another article on TDD](https://www.browserstack.com/guide/what-is-test-driven-development)
