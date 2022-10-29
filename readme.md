@@ -9,15 +9,34 @@ The end goal is to create a `calculateScrabbleScore` function that calculates a 
 
 The scores for each letter are as follows:
 
-| Letter              | Score |
-| ------------------- | ----- |
-| A E I O U L N R S T | 1     |
-| D G                 | 2     |
-| B C M P             | 3     |
-| F H V W Y           | 4     |
-| K                   | 5     |
-| J X                 | 8     |
-| Q Z                 | 10    |
+| Letter | Score |
+| ------ | ----- |
+| A      | 1     |
+| B      | 3     |
+| C      | 3     |
+| D      | 2     |
+| E      | 1     |
+| F      | 4     |
+| G      | 2     |
+| H      | 4     |
+| I      | 1     |
+| J      | 8     |
+| K      | 5     |
+| L      | 1     |
+| M      | 3     |
+| N      | 1     |
+| O      | 1     |
+| P      | 3     |
+| Q      | 10    |
+| R      | 1     |
+| S      | 1     |
+| T      | 1     |
+| U      | 1     |
+| V      | 4     |
+| W      | 4     |
+| X      | 8     |
+| Y      | 4     |
+| Z      | 10    |
 
 To give a couple of examples of how this table works:
 
@@ -28,7 +47,7 @@ We'll keep extending the functionality in small increments.
 
 **Remember the discipline:** Write the simplest and minimal test for a failing test case. Then write the simplest and minimal code/implementation to pass the failing test. Don't read ahead, don't try to predict what the code might need later.
 
-## Step 1 - single letters only
+## Ticket 1 - single letters only
 
 1. Write a new test that checks whether `calculateScrabbleScore` correctly calculates the score for the word `A`.
    - Once you've written the test, try running the test script via `npm run test` (or `npm t` for short) in your terminal.
@@ -49,18 +68,18 @@ We'll keep extending the functionality in small increments.
      - Refactor where/if needed.
      - Then on to the next single letter word
 
-   - These steps will probably involve a lot of repetition. Have a look at the `.each` method from Jest ([docs](https://jestjs.io/docs/api#testeachtablename-fn-timeout)), which can be a handy way to reduce/avoid repetition when writing tests. Do your best to read through the examples in the documentation to understand how `.each` can be used -- and then try to apply what you're seeing in the examples to your own code.
+   - **Optional:** These steps will probably involve a lot of repetition. Optionally, have a look at the `.each` method from Jest ([docs](https://jestjs.io/docs/api#testeachtablename-fn-timeout)), which can be a handy way to reduce/avoid repetition when writing tests. See if you can read through the examples in the documentation to understand how `.each` can be used -- and then try to apply what you're seeing in the examples to your own code. Have a look on the internet (e.g. articles, blogs, YouTube videos, etc.) for resources that might help. If you spend too much time on getting `.each` to work, write the tests for the single letter words without it (even if it means you have repetition).
 
 **Remember the discipline of writing the minimal amount of code to meet the current requirements.** Your implementation should only handle single letter words at the end of this stage.
 
-## Step 2 - multiple letters
+## Ticket 2 - multiple letters
 
 1. Write a new test for a word that has more than one letter. The choice of word is up to you and you'll need to figure out the correct score for it. The test should currently fail.
 2. Update the implementation to make the failing test pass. The implementation will now start to get more complex.
 3. Refactor where/if needed.
 4. Repeat steps 1-3 for several other words which have more than one letter. Which words you choose is up to you.
 
-## Step 3 - input validation
+## Ticket 3 - input validation
 
 1. Write a new test to ensure the function throws an error if any of the characters in the word given are outside of A-Z. You can use `.toThrow` ([Jest docs](https://jestjs.io/docs/expect#tothrowerror)) to catch and check the error. The test should currently fail.
 
@@ -68,7 +87,7 @@ We'll keep extending the functionality in small increments.
 
 3. Refactor where/if needed.
 
-## Step 4 - bonus score
+## Ticket 4 - bonus score
 
 A new requirement has come in.
 
@@ -76,7 +95,7 @@ A new requirement has come in.
 
 Go through the TDD process (write a failing test -> update the implementation so that the test passes -> refactor where/if needed) to support/meet this requirement.
 
-## Step 5 - case insensitivity
+## Ticket 5 - case insensitivity
 
 A new requirement has come in.
 
