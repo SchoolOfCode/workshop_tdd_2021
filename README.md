@@ -58,3 +58,7 @@ We'll keep extending the functionality in small increments.
 **Remember the discipline:** Write the simplest and minimal test for a failing test case. Then write the simplest and minimal code/implementation to pass the failing test. Don't read ahead, don't try to predict what the code might need later.
 
 Time to dive into action! 🏊‍♂️ Here's what you'll be working on:
+
+### 🎫 Ticket 1 - Setup
+
+Install Vitest as a dev dependency. If you need a refresher, search online for how to install Vitest and how to have it run your tests.
