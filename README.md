@@ -79,3 +79,10 @@ Install Vitest as a dev dependency. If you need a refresher, search online for h
    - **Optional:** Writing all these tests might feel repetitive. You could try using Vitest's `test.each` method ([docs](https://vitest.dev/api/#test-each)) to avoid repeating code. Look at the `.each` examples to see how it works. Try using it in your tests. If you spend too much time on `.each`, just write the tests without it, even if you repeat code.
 
 **Remember the discipline of writing the minimal amount of code to meet the current requirements.** Your implementation should only handle single letter words by the end of this ticket.
+
+### 🎫 Ticket 3 - Multiple letters
+
+1. Write a new failing test for a word with more than one letter. Pick the word and figure out its score.
+2. Update the code so the new test passes.
+3. Look over the code. Refactor/simplify if needed and then re-run the tests to make sure the tests still pass after any changes.
+4. Repeat steps 1-3 for more words with multiple letters. Pick whatever words you want.
