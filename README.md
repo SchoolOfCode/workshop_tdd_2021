@@ -94,3 +94,11 @@ Install Vitest as a dev dependency. If you need a refresher, search online for h
 2. Update the implementation to make the failing test pass. You can use the `throw` statement in JS to deliberately throw/cause an error: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw#description
 
 3. Refactor where/if needed and then re-run the tests to make sure they still pass after your changes.
+
+### 🎫 Ticket 5 - Bonus score
+
+A new requirement has come in.
+
+> If a player uses all seven tiles, they should score a bonus of 50 points on top of the word score.
+
+Go through the TDD process (write a failing test -> update the implementation so that the test passes -> refactor where/if needed) to support/meet this requirement.
