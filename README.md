@@ -102,3 +102,11 @@ A new requirement has come in.
 > If a player uses all seven tiles, they should score a bonus of 50 points on top of the word score.
 
 Go through the TDD process (write a failing test -> update the implementation so that the test passes -> refactor where/if needed) to support/meet this requirement.
+
+### 🎫 Ticket 6 - Case insensitivity
+
+A new requirement has come in.
+
+> The function should support both uppercase and lowercase letters, and score correctly. The lowercase letters have the same values as their uppercase equivalents.
+
+Go through the TDD process (write a failing test -> update the implementation so that the test passes -> refactor where/if needed) to support/meet this requirement.
