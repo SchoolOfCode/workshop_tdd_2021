@@ -69,7 +69,7 @@ Install Vitest as a dev dependency. If you need a refresher, search online for h
    - Once you've written the test, run the tests with Vitest.
    - The test you wrote should fail at first. This is because you wrote the test before writing the code to make it pass.
    - This is the "red" stage in the TDD cycle (red -> green -> refactor)
-2. Now add the smallest amount of code you can to the `calculateScrabbleScore` function. Make it return the right score for the word "A" to pass the failing test.
+2. Now add the simplest code you can to the `calculateScrabbleScore` function. Make it return the right score for the word "A" to pass the failing test.
    - Once you've updated the implementation, run the tests again.
    - This time the test should pass (if your implementation is correct).
    - This is the "green" stage in the TDD cycle (red -> green -> refactor)
@@ -78,7 +78,7 @@ Install Vitest as a dev dependency. If you need a refresher, search online for h
 4. Now repeat steps 1-3 for the remaining single letter words (i.e. `B`, `C`, `D` and so forth up to and including `Z`).
    - **Optional:** Writing all these tests might feel repetitive. You could try using Vitest's `test.each` method ([docs](https://vitest.dev/api/#test-each)) to avoid repeating code. Look at the `.each` examples to see how it works. Try using it in your tests. If you spend too much time on `.each`, just write the tests without it, even if you repeat code.
 
-**Remember the discipline of writing the minimal amount of code to meet the current requirements.** Your implementation should only handle single letter words by the end of this ticket.
+**Remember the discipline of writing the simplest code to meet the current requirements.** Your implementation should only handle single letter words by the end of this ticket.
 
 ### 🎫 Ticket 3 - Multiple letters
 
