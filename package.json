@@ -2,13 +2,8 @@
   "name": "soc-tdd-2021-12",
   "version": "0.0.1",
   "description": "Simple codebase for trying TDD",
-  "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
-  },
+  "scripts": {},
   "type": "module",
   "author": "Rob Styles",
-  "license": "ISC",
-  "dependencies": {
-    "jest": "^29.5.0"
-  }
+  "license": "ISC"
 }
