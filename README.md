@@ -10,12 +10,16 @@ This workshop is all about TDD! Here's a glimpse of what you'll be achieving by 
 - Object 2: Applying the TDD cycle (red -> green -> refactor)
 - Object 3: Having a disciplined focus on writing the simplest, minimal working implementation to pass a failing test
 
+## 🤝 Team Programming
+
+When completing this workshop in your teams, use a ping-pong approach to pair programming. One person writes the failing test, another writes the code to pass it. Discuss the tests and implementations, and provide constructive feedback to each other. This helps you learn from different perspectives and improve your coding skills.
+
 ## 🎟️ TICKETS
 
-Your manager has tasked you with creating a `calculateScrabbleScore` function that takes in a word and returns a correctly calculated scrabble score for that word.
+Your manager has tasked you with creating a `calculateScrabbleWordScore` function that takes in a word and returns a correctly calculated scrabble score for that word.
 
 - Your tests will go in `scrabble-score.test.js`.
-- Your implementation will go in `scrabble-score.js`. If you look there, a basic skeleton for the function has already been created and exported for you.
+- Your implementation will go in `scrabble-score.js`. If you look there, the required functions have already been created and exported for you.
 
 The scores for each letter are as follows:
 
@@ -63,31 +67,42 @@ Time to dive into action! 🏊‍♂️ Here's what you'll be working on:
 
 Install Vitest as a dev dependency. If you need a refresher, search online for how to install Vitest and how to have it run your tests.
 
+#### 🧪 Using Vitest
+
+Vitest is a testing framework that allows you to write and run tests easily. In this project, we use Vitest to ensure our code works as expected. You can learn more about Vitest [here](https://vitest.dev/).
+
 ### 🎫 Ticket 2 - Single letters
 
-1. Write a new test that checks whether `calculateScrabbleScore` correctly calculates the score for the word `A`.
+1. Write a new test that checks whether `calculateScrabbleLetterScore` correctly calculates the score for the word `A`.
    - Once you've written the test, run the tests with Vitest.
    - The test you wrote should fail at first. This is because you wrote the test before writing the code to make it pass.
    - This is the "red" stage in the TDD cycle (red -> green -> refactor)
-2. Now add the simplest code you can to the `calculateScrabbleScore` function. Make it return the right score for the word "A" to pass the failing test.
+2. Now add the simplest code you can to the `calculateScrabbleLetterScore` function. Make it return the right score for the letter `A` to pass the failing test.
    - Once you've updated the implementation, run the tests again.
    - This time the test should pass (if your implementation is correct).
    - This is the "green" stage in the TDD cycle (red -> green -> refactor)
 3. Look over the code. Make changes to simplify or improve it if you can. When you're done with changes, run the tests again. This checks that your changes didn't break anything.
    - This is the "refactor" stage in the TDD cycle (red -> green -> refactor)
-4. Now repeat steps 1-3 for the remaining single letter words (i.e. `B`, `C`, `D` and so forth up to and including `Z`).
+4. Now repeat steps 1-3 for the remaining letters (i.e. `B`, `C`, `D` and so forth up to and including `Z`).
    - **Optional:** Writing all these tests might feel repetitive. You could try using Vitest's `test.each` method ([docs](https://vitest.dev/api/#test-each)) to avoid repeating code. Look at the `.each` examples to see how it works. Try using it in your tests. If you spend too much time on `.each`, just write the tests without it, even if you repeat code.
 
-**Remember the discipline of writing the simplest code to meet the current requirements.** Your implementation should only handle single letter words by the end of this ticket.
+#### Summary 🔄 TDD Cycle
 
-### 🎫 Ticket 3 - Multiple letters
+The TDD cycle consists of three stages:
 
-1. Write a new failing test for a word with more than one letter. Pick the word and figure out its score.
-2. Update the code so the new test passes.
-3. Look over the code. Refactor/simplify if needed and then re-run the tests to make sure the tests still pass after any changes.
-4. Repeat steps 1-3 for more words with multiple letters. Pick whatever words you want.
+1. **Red:** Write a failing test.
+2. **Green:** Write the simplest code to pass the test.
+3. **Refactor:** Improve the code while ensuring tests still pass.
 
-### 🎫 Ticket 4 - Input validation
+Example:
+
+- **Red:** Write a test for `calculateScrabbleLetterScore('A')` expecting a score of 1.
+- **Green:** Implement `calculateScrabbleLetterScore` to return 1 for 'A'.
+- **Refactor:** Simplify the code if possible, ensuring the test still passes.
+
+**Remember the discipline of writing the simplest code to meet the current requirements.** Don't try to predict what the code might need later.
+
+### 🎫 Ticket 3 - Input validation
 
 1. Write a new test to ensure the function throws an error if any of the characters in the word given are outside of A-Z. You can use `.toThrowError` ([Vitest docs](https://vitest.dev/api/expect.html#tothrowerror)) to catch and check the error. The test should currently fail.
 
@@ -95,7 +110,7 @@ Install Vitest as a dev dependency. If you need a refresher, search online for h
 
 3. Refactor where/if needed and then re-run the tests to make sure they still pass after your changes.
 
-### 🎫 Ticket 5 - Bonus score
+### 🎫 Ticket 4 - Bonus score
 
 A new requirement has come in.
 
@@ -103,10 +118,38 @@ A new requirement has come in.
 
 Go through the TDD process (write a failing test -> update the implementation so that the test passes -> refactor where/if needed) to support/meet this requirement.
 
-### 🎫 Ticket 6 - Case insensitivity
+### 🎫 Ticket 5 - Case insensitivity
 
 A new requirement has come in.
 
 > The function should support both uppercase and lowercase letters, and score correctly. The lowercase letters have the same values as their uppercase equivalents.
 
 Go through the TDD process (write a failing test -> update the implementation so that the test passes -> refactor where/if needed) to support/meet this requirement.
+
+### 🎫 Ticket 6 - Multiple letters
+
+Now that we have a tested function for single letters, we can confidently use it to calculate the score for words with multiple letters.
+
+Let's move on to words with multiple letters using the `calculateScrabbleWordScore` function.
+
+If we wanted to unit test the `calculateScrabbleWordScore` function, we would want to mock the `calculateScrabbleLetterScore` function so that `calculateScrabbleWordScore` is tested in isolation (without depending on the `calculateScrabbleLetterScore` function).
+
+For this workshop, we'll leave that for a bonus challenge for you. Instead, we'll write what could be described as an integration test for `calculateScrabbleWordScore` by using the `calculateScrabbleLetterScore` function.
+
+1. Write a failing test for `calculateScrabbleWordScore` with a word containing more than one letter. Choose a word and calculate its expected score.
+2. Update the `calculateScrabbleWordScore` function so the new test passes, making sure to use `calculateScrabbleLetterScore`.
+3. Review the code. Refactor or simplify if necessary, and then re-run the tests to ensure they still pass after any changes.
+4. Repeat steps 1-3 for additional words with multiple letters. You can choose any words you like.
+
+This process will help ensure that our function works correctly for more complex inputs by integrating the single letter scoring logic.
+
+## 🎉 Conclusion
+
+Congratulations on completing the TDD workshop! Here are the key takeaways:
+
+- Write tests before code.
+- Follow the TDD cycle: red -> green -> refactor.
+- Write simple and minimal code to pass tests.
+- Refactor code to improve it while ensuring tests still pass.
+
+Keep practicing TDD in your future projects to build robust and maintainable code. Happy coding!

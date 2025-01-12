@@ -1,1 +1,3 @@
-export function calculateScrabbleScore(word) {}
+export function calculateScrabbleLetterScore(letter) {}
+
+export function calculateScrabbleWordScore(word) {}

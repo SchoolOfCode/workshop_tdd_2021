@@ -1,1 +1,4 @@
-import { calculateScrabbleScore } from "./scrabble-score";
+import {
+  calculateScrabbleLetterScore,
+  calculateScrabbleWordScore,
+} from "./scrabble-score";
