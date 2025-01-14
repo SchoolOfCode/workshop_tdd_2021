@@ -104,21 +104,13 @@ Example:
 
 ### 🎫 Ticket 3 - Input validation
 
-1. Write a new test to ensure the function throws an error if any of the characters in the word given are outside of A-Z. You can use `.toThrowError` ([Vitest docs](https://vitest.dev/api/expect.html#tothrowerror)) to catch and check the error. The test should currently fail.
+1. Write a new test to ensure the function throws an error if the character given is outside of A-Z. You can use `.toThrowError` ([Vitest docs](https://vitest.dev/api/expect.html#tothrowerror)) to catch and check the error. The test should currently fail.
 
 2. Update the implementation to make the failing test pass. You can use the `throw` statement in JS to deliberately throw/cause an error: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw#description
 
 3. Refactor where/if needed and then re-run the tests to make sure they still pass after your changes.
 
-### 🎫 Ticket 4 - Bonus score
-
-A new requirement has come in.
-
-> If a player uses all seven tiles, they should score a bonus of 50 points on top of the word score.
-
-Go through the TDD process (write a failing test -> update the implementation so that the test passes -> refactor where/if needed) to support/meet this requirement.
-
-### 🎫 Ticket 5 - Case insensitivity
+### 🎫 Ticket 4 - Case insensitivity
 
 A new requirement has come in.
 
@@ -126,7 +118,7 @@ A new requirement has come in.
 
 Go through the TDD process (write a failing test -> update the implementation so that the test passes -> refactor where/if needed) to support/meet this requirement.
 
-### 🎫 Ticket 6 - Multiple letters
+### 🎫 Ticket 5 - Multiple letters
 
 Now that we have a tested function for single letters, we can confidently use it to calculate the score for words with multiple letters.
 
@@ -142,6 +134,14 @@ For this workshop, we'll leave that for a bonus challenge for you. Instead, we'l
 4. Repeat steps 1-3 for additional words with multiple letters. You can choose any words you like.
 
 This process will help ensure that our function works correctly for more complex inputs by integrating the single letter scoring logic.
+
+### 🎫 Ticket 6 - Bonus score
+
+A new requirement has come in.
+
+> If a player uses all seven tiles, they should score a bonus of 50 points on top of the word score.
+
+Go through the TDD process (write a failing test -> update the implementation so that the test passes -> refactor where/if needed) to support/meet this requirement.
 
 ## 🎉 Conclusion
 
